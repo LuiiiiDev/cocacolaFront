@@ -10,7 +10,7 @@ const useProductData = () => {
     try {
       setLoading(true)
       setError(null)
-      const response = await fetch('http://localhost:4000/api/products')
+      const response = await fetch('https://api-rest-bl9i.onrender.com/api/products')
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`)
@@ -35,7 +35,7 @@ const useProductData = () => {
   const addProduct = async (productData) => {
     try {
       setError(null) // Limpiar errores previos
-      const response = await fetch('http://localhost:4000/api/products', {
+      const response = await fetch('https://api-rest-bl9i.onrender.com/api/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const useProductData = () => {
   const updateProduct = async (id, productData) => {
     try {
       setError(null) // Limpiar errores previos
-      const response = await fetch(`http://localhost:4000/api/products/${id}`, {
+      const response = await fetch(`https://api-rest-bl9i.onrender.com/api/products/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const useProductData = () => {
   const deleteProduct = async (id) => {
     try {
       setError(null) // Limpiar errores previos
-      const response = await fetch(`http://localhost:4000/api/products/${id}`, {
+      const response = await fetch(`https://api-rest-bl9i.onrender.com/api/products/${id}`, {
         method: 'DELETE',
       })
 

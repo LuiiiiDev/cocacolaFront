@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Search, Plus, Building2, MapPin, Calendar, Clock, Phone, Edit, Trash2 } from 'lucide-react'
 import useBranchData from '../hooks/useBranchData'
-import AddBranchModal from '../components/Branch Modals/AddBranchModal'
+import AddBranchModal from '../components/Branch Modals/AddBranchmodal'
 import EditBranchModal from '../components/Branch Modals/EditBranchModal'
 
 function Sucursales() {
